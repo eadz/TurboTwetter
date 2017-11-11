@@ -10,29 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171111202459) do
-
-  create_table "tweets", force: :cascade do |t|
-    t.integer "user_id"
-    t.text "tweet"
-    t.string "tweet_type"
-    t.string "source"
-    t.integer "recipient_id"
-    t.integer "in_reply_to_status_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_tweets_on_user_id"
+ActiveRecord::Schema.define(version: 20_171_111_202_459) do
+  create_table 'tweets', force: :cascade do |t|
+    t.integer 'user_id'
+    t.text 'tweet'
+    t.string 'tweet_type'
+    t.string 'source'
+    t.integer 'recipient_id'
+    t.integer 'in_reply_to_status_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['user_id'], name: 'index_tweets_on_user_id'
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "name"
-    t.string "email"
-    t.string "bio"
-    t.string "location"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["username"], name: "index_users_on_username"
+  create_table 'users', force: :cascade do |t|
+    t.string 'username'
+    t.string 'name'
+    t.string 'email'
+    t.string 'bio'
+    t.string 'location'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['username'], name: 'index_users_on_username'
   end
-
 end

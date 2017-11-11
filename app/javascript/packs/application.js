@@ -28,6 +28,8 @@ injectGlobal`
   }
 `
 
-import Tweets from 'components/Tweets'
+import Timeline from 'pages/timeline/TimeLine'
+import NewSession from 'pages/sessions/NewSession'
+import User from 'pages/user'
 
-WebpackerReact.setup({Tweets});
+WebpackerReact.setup({Timeline, NewSession, User});

@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
   def index
-    render react_component: 'Tweets', props: { tweets: Tweet.public_timeline.all }
+    @tweets = Tweet.public_timeline.limit(100)
+    render react_component: 'Timeline', props: global_props.merge(tweets: @tweets)
   end
 
   def create; end
