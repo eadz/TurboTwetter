@@ -34,12 +34,18 @@ Add to layout:
 Remove from layout:
 `<%= javascript_include_tag 'application' %>`
 
-Add 3 npm packages
+Add npm packages
+
 `yarn add turbolinks`
+
 `yarn add styled-components` # optional
-`yarn add uigradients` # optional
 
 
+# To Setup
 
-# To Run:
+```sh
+bundle install
+./bin/rake db:migrate
+```
+# To Run
 `./bin/rails s` and `./bin/webpack-dev-server`
