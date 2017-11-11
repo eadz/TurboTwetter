@@ -7,4 +7,27 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-console.log('Hello World from Webpacker')
+import WebpackerReact from 'webpacker-react';
+
+import Turbolinks from 'turbolinks';
+Turbolinks.start();
+
+import { injectGlobal } from 'styled-components';
+
+injectGlobal`
+  body, html {
+    margin: 0;
+    padding: 0;
+    background: #667db6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: sans-serif;
+  }
+  html, body {
+    height: 100%
+  }
+`
+
+import Tweets from 'components/Tweets'
+
+WebpackerReact.setup({Tweets});

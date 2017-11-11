@@ -16,7 +16,30 @@ run
 
 `run ./bin/yarn add webpacker-react`
 
-# Create models and controllers
+### Create models and controllers
 User and Tweet model, session and tweet controllers
 
 using `rails g model` and `rails g controller`
+
+### delete some files!
+All view folders except `layouts`
+
+### Add default route to tweets/index
+
+# Views
+
+Add to layout:
+`<%= javascript_pack_tag 'application' %>`
+
+Remove from layout:
+`<%= javascript_include_tag 'application' %>`
+
+Add 3 npm packages
+`yarn add turbolinks`
+`yarn add styled-components` # optional
+`yarn add uigradients` # optional
+
+
+
+# To Run:
+`./bin/rails s` and `./bin/webpack-dev-server`
