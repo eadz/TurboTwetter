@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  tweet: MyText
+  tweet_type: MyString
+  source: MyString
+  recipient_id: 1
+  in_reply_to_status_id: 1
+
+two:
+  user: two
+  tweet: MyText
+  tweet_type: MyString
+  source: MyString
+  recipient_id: 1
+  in_reply_to_status_id: 1

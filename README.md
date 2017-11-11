@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## How this app was made
 
-* Ruby version
+Fresh rails 5.1 app:
 
-* System dependencies
+`rails new Twetter -d sqlite3 --webpack=react --skip-coffee`
 
-* Configuration
+add webpacker-react gem to your GemFile
 
-* Database creation
+`gem 'webpacker-react', "~> 0.3.2"`
 
-* Database initialization
+run
+`bundle`
 
-* How to run the test suite
+`run ./bin/yarn add webpacker-react`
 
-* Services (job queues, cache servers, search engines, etc.)
+# Create models and controllers
+User and Tweet model, session and tweet controllers
 
-* Deployment instructions
-
-* ...
+using `rails g model` and `rails g controller`
