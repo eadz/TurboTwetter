@@ -49,3 +49,8 @@ bundle install
 ```
 # To Run
 `./bin/rails s` and `./bin/webpack-dev-server`
+
+
+# TODO
+profile images ( rails 5.2 ? )
+pagination

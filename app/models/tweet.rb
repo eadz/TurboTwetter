@@ -1,7 +1,9 @@
 class Tweet < ApplicationRecord
   belongs_to :user
 
-  scope :public_timeline, -> { order('created_at desc').includes(:user) }
+  scope :public_timeline, -> {
+    where(tweet_type: nil).order('created_at desc').includes(:user)
+  }
 
   validates :tweet, presence: true
 

@@ -8,8 +8,7 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by(username: params[:username])
     if @user
-      session[:user_id] = @user.id
-      redirect_to :root
+      log_in_user(@user)
     else
       render react_component: 'NewSession', props: global_props.merge(errors: ['User Not Found'])
     end

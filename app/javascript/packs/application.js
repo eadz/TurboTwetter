@@ -7,10 +7,11 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-import WebpackerReact from 'webpacker-react';
 
 import Turbolinks from 'turbolinks';
 Turbolinks.start();
+
+import WebpackerReact from 'webpacker-react';
 
 import { injectGlobal } from 'styled-components';
 
@@ -19,8 +20,8 @@ injectGlobal`
     margin: 0;
     padding: 0;
     background: #667db6; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-family: sans-serif;
   }
   html, body {
@@ -28,8 +29,9 @@ injectGlobal`
   }
 `
 
-import Timeline from 'pages/timeline/TimeLine'
-import NewSession from 'pages/sessions/NewSession'
-import User from 'pages/user'
+import Timeline from 'pages/timeline/TimeLine';
+import NewSession from 'pages/sessions/NewSession';
+import User from 'pages/user';
+import UserProfile from 'pages/UserProfile';
 
-WebpackerReact.setup({Timeline, NewSession, User});
+WebpackerReact.setup({Timeline, NewSession, User, UserProfile});

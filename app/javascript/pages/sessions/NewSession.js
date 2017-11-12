@@ -5,24 +5,22 @@ import { Input, Button, Heading, Message } from 'rebass';
 
 import Layout from '../../components/Layout';
 import CsrfTag from '../../components/CsrfTag';
+import ErrorMessages from '../../components/ErrorMessages';
+
+const SideBar = () => (
+  <p>New to Twetter? <a href="/signup">Signup Here</a></p>
+)
 
 class NewSession extends Component {
-  renderErrorMessages() {
-    if(this.props.errors) {
-      return this.props.errors.map((error, idx) => (
-        <Message bg="red" size={1} key={idx}>{error}</Message>
-      ))
-    }
-  }
+
   render() {
     return (
-      <Layout logged_in={this.props.logged_in}>
+      <Layout sidebar={SideBar} logged_in={this.props.logged_in} logged_in_user={this.props.logged_in_user}>
         <Heading>Login</Heading>
-        {this.renderErrorMessages()}
+        <ErrorMessages errors={this.props.errors} />
         <form action="/login" method="POST" data-remote="true">
           <CsrfTag {...this.props.csrf} />
-          <Input size={4} placeholder="username" name="username"/>
-
+          <Input placeholder="username" name="username" autoComplete="off" style={{margin: '10px', width: '200px'}} />
           <Button type="submit">Login</Button>
         </form>
       </Layout>
