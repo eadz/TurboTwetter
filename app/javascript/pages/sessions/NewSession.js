@@ -10,7 +10,7 @@ class NewSession extends Component {
   renderErrorMessages() {
     if(this.props.errors) {
       return this.props.errors.map((error, idx) => (
-        <Message bg="red" size={1} key={idx}>{e}</Message>
+        <Message bg="red" size={1} key={idx}>{error}</Message>
       ))
     }
   }

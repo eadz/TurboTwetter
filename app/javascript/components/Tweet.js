@@ -9,15 +9,11 @@ const TweetWrap = styled(Card)`
   margin-bottom: 1em;
 `
 
-const Username = styled.a`
-
-`
-
 class Tweet extends Component {
   render() {
     return (
       <TweetWrap p={3}>
-        <Text><Username href={`/users/${this.props.username}`}>{this.props.username}</Username> {this.props.tweet}</Text>
+        <Text><a href={`/users/${this.props.username}`}>{this.props.username}</a> {this.props.tweet}</Text>
 
       </TweetWrap>
     );
