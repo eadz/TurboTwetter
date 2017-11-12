@@ -16,10 +16,10 @@ class NewSession extends Component {
   }
   render() {
     return (
-      <Layout>
+      <Layout logged_in={this.props.logged_in}>
         <Heading>Login</Heading>
         {this.renderErrorMessages()}
-        <form action="/login" method="POST">
+        <form action="/login" method="POST" data-remote="true">
           <CsrfTag {...this.props.csrf} />
           <Input size={4} placeholder="username" name="username"/>
 

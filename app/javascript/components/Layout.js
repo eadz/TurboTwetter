@@ -10,11 +10,11 @@ const PageContainer = styled(Container)`
   padding: 3em;
 `
 
-const Layout = ({children}) => (
+const Layout = ({children, logged_in}) => (
   <Provider>
     <Toolbar>
       <NavLink href="/">Twetter</NavLink>
-      <NavLink ml="auto" href="/logout">Log Out</NavLink>
+      {logged_in && <NavLink ml="auto" href="/logout">Log Out</NavLink>}
     </Toolbar>
     <PageContainer>
       {children}

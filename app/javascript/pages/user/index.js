@@ -8,7 +8,7 @@ import Layout from '../../components/Layout';
 class User extends Component {
   render() {
     return (
-      <Layout>
+      <Layout logged_in={this.props.logged_in}>
         <Card>
           <Heading>{this.props.user.username}</Heading>
           <p>Signed up: {this.props.user.created_at}</p>

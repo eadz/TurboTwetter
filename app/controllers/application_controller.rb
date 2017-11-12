@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
 
   def global_props
     {
+      logged_in: user.present?, 
       csrf: {
         csrf_param: request_forgery_protection_token,
         csrf_token: form_authenticity_token

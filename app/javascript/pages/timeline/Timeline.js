@@ -7,7 +7,7 @@ import Layout from '../../components/Layout';
 class Timeline extends Component {
   render() {
     return (
-      <Layout>
+      <Layout logged_in={this.props.logged_in}>
         <div>
           {
             this.props.tweets.map((tweet, idx) => (
